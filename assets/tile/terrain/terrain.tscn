@@ -1,8 +1,8 @@
 [gd_scene load_steps=2 format=3 uid="uid://n0s3f7885srm"]
 
-[ext_resource type="TileSet" uid="uid://cu6a3q6ddchbl" path="res://assets/tile/terrain/terrain.tres" id="1_1x3po"]
+[ext_resource type="TileSet" uid="uid://b72w3m620b4mb" path="res://assets/tile/decoration/decoration_grass.tres" id="1_x1ukc"]
 
 [node name="TileMap" type="TileMap"]
-tile_set = ExtResource("1_1x3po")
+tile_set = ExtResource("1_x1ukc")
 cell_quadrant_size = 32
 format = 2

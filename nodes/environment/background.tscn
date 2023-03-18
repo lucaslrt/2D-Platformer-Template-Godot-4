@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cvwnk3vrjbdrh" path="res://assets/tile/parallax_background/layer_1.png" id="3_muq3a"]
 [ext_resource type="Texture2D" uid="uid://1cbwywwq1fft" path="res://assets/tile/parallax_background/layer_2.png" id="4_wcy54"]
 [ext_resource type="Texture2D" uid="uid://cxedx8f47qks0" path="res://assets/tile/parallax_background/layer_3.png" id="5_44a0s"]
-[ext_resource type="PackedScene" uid="uid://de83us426lcuk" path="res://nodes/environment/mask.tscn" id="6_q7drm"]
+[ext_resource type="PackedScene" uid="uid://de83us426lcuk" path="res://nodes/environment/mask.tscn" id="6_sqj1d"]
 
 [node name="Background" type="ParallaxBackground"]
 script = ExtResource("1_y1eht")
@@ -46,5 +46,4 @@ offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("5_44a0s")
 
-[node name="Mask" parent="." instance=ExtResource("6_q7drm")]
-color = Color(0.352941, 0.352941, 0.352941, 1)
+[node name="Mask" parent="." instance=ExtResource("6_sqj1d")]
