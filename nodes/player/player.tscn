@@ -1,8 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://dylqcy8c03sq"]
+[gd_scene load_steps=12 format=3 uid="uid://dylqcy8c03sq"]
 
 [ext_resource type="Script" path="res://nodes/player/player.gd" id="1_7c6at"]
 [ext_resource type="Texture2D" uid="uid://dijb14hwsyjee" path="res://assets/player/char_purple.png" id="1_043ca"]
 [ext_resource type="Script" path="res://nodes/player/player_sprite.gd" id="3_ge577"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w32fr"]
+size = Vector2(12, 31)
 
 [sub_resource type="Animation" id="Animation_cmnot"]
 resource_name = "run"
@@ -115,8 +118,6 @@ _data = {
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_7c6at")
 
-[node name="Collision" type="CollisionShape2D" parent="."]
-
 [node name="Sprite" type="Sprite2D" parent="."]
 texture = ExtResource("1_043ca")
 hframes = 8
@@ -125,10 +126,17 @@ frame = 27
 script = ExtResource("3_ge577")
 animation_path = NodePath("../AnimationPlayer")
 
+[node name="Collision" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-1, 12.5)
+shape = SubResource("RectangleShape2D_w32fr")
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_xx8vb")
 }
 
 [node name="Camera2D" type="Camera2D" parent="."]
-enabled = false
+limit_top = 0
+drag_horizontal_enabled = true
+drag_vertical_enabled = true

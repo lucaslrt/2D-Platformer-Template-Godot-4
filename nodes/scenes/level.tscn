@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://b63dllokxw172"]
+[gd_scene load_steps=6 format=3 uid="uid://b63dllokxw172"]
 
 [ext_resource type="TileSet" uid="uid://cu6a3q6ddchbl" path="res://assets/tile/terrain/terrain.tres" id="2_ndddo"]
 [ext_resource type="TileSet" uid="uid://cpvfvqgfj36rk" path="res://assets/tile/decoration/decoration.tres" id="3_mt4av"]
 [ext_resource type="PackedScene" uid="uid://ct3u7filrou6b" path="res://nodes/environment/background.tscn" id="4_qqieo"]
 [ext_resource type="PackedScene" uid="uid://de83us426lcuk" path="res://nodes/environment/mask.tscn" id="4_qt5t1"]
+[ext_resource type="PackedScene" uid="uid://dylqcy8c03sq" path="res://nodes/player/player.tscn" id="5_jaxaa"]
 
 [node name="Level" type="Node2D"]
 
@@ -23,5 +24,8 @@ layer_0/tile_data = PackedInt32Array(458764, 131072, 2, 393228, 131072, 0, 45876
 [node name="Background" parent="LevelDesign" instance=ExtResource("4_qqieo")]
 
 [node name="Mask" parent="." instance=ExtResource("4_qt5t1")]
+
+[node name="Player" parent="." instance=ExtResource("5_jaxaa")]
+position = Vector2(92, 23)
 
 [editable path="LevelDesign/Background"]
