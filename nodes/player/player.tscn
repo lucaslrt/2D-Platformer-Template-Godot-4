@@ -75,7 +75,7 @@ tracks/0/keys = {
 [sub_resource type="Animation" id="Animation_w47s2"]
 resource_name = "fall"
 length = 0.4
-loop_mode = 1
+loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -125,6 +125,7 @@ vframes = 11
 frame = 27
 script = ExtResource("3_ge577")
 animation_path = NodePath("../AnimationPlayer")
+player_path = NodePath("..")
 
 [node name="Collision" type="CollisionShape2D" parent="."]
 visible = false
@@ -140,3 +141,5 @@ libraries = {
 limit_top = 0
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
+
+[connection signal="animation_finished" from="AnimationPlayer" to="Sprite" method="_on_animation_finished"]
